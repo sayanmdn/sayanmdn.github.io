@@ -1,4 +1,7 @@
-<link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap"
+  rel="stylesheet"
+/>
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,19 +10,40 @@
     <title>Sayantan's Website</title>
   </head>
   <body>
-    <h2>Sayantan's Website</h2>
-    <hr />
-    <p class="common-text">
-      <big>Hello</big> all from me. I'm just brussing up my <b>html</b> skills.
-    </p>
-    <pre>
-It's pre,
-Now I not need to write Br tag.
-    </pre>
-    <p>I have to drink H<sub>2</sub>O</p>
-    <p>Just 10<sup>2</sup> times</p>
-    <!-- Onthing to say now. it's just a comment -->
-    <img height="50%" width="30%" src="../img/team-1.JPG" alt="Suman Da" />
+    <div class="holder-main">
+      <div class="left-div">
+        <h2 id="heading">Sayantan's Website</h2>
+        <hr />
+        <p class="common-text">
+          <big>Hello</big> all from me. I'm just brussing up my
+          <b>html</b> skills.
+        </p>
+        <pre>
+          It's pre,
+          Now I not need to write Br tag.
+        </pre>
+        <p>I have to drink H<sub>2</sub>O</p>
+        <p>Just 10<sup>2</sup> times</p>
+        <!-- Onthing to say now. it's just a comment -->
+        <img width="90%" src="../img/team-1.JPG" alt="Suman Da" />
+      </div>
+      <div class="center-div">
+        <h2 id="heading">Suman's Website</h2>
+        <hr />
+        <p class="common-text">
+          <big>Hello</big> all from me. I'm just brussing up my
+          <b>html</b> skills.
+        </p>
+        <pre>
+          It's pre,
+          Now I not need to write Br tag.
+        </pre>
+        <p>I have to drink H<sub>2</sub>O</p>
+        <p>Just 10<sup>2</sup> times</p>
+        <!-- Onthing to say now. it's just a comment -->
+        <img width="90%" src="../img/team-1.JPG" alt="Suman Da" />
+      </div>
+    </div>
   </body>
 </html>
 <style>
@@ -30,5 +54,19 @@ Now I not need to write Br tag.
   h2 {
     color: rgb(97, 66, 200);
     font-family: Ranchers, monospace;
+  }
+  #heading {
+    background-color: cyan;
+  }
+  .left-div {
+    width: 30%;
+  }
+  .center-div {
+    width: 30%;
+  }
+  .left-div,
+  .center-div {
+    display: inline-block;
+    vertical-align: top;
   }
 </style>
