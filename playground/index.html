@@ -10,7 +10,7 @@
     <title>Sayantan's Website</title>
   </head>
   <body>
-    <div class="holder-main">
+    <div class="flex-container">
       <div class="left-div">
         <h2 id="heading">Sayantan's Website</h2>
         <hr />
@@ -18,18 +18,10 @@
           <big>Hello</big> all from me. I'm just brussing up my
           <b>html</b> skills.
         </p>
-<<<<<<< HEAD
-        <p>
-          It's pre,
-          Now I not need to write Br tag.
-        </p>
-=======
-        <p>It's p, Now I need to write Br tag.</p>
->>>>>>> fb5c668b1a25f763b09a29096630ae8f3710e18c
         <p>I have to drink H<sub>2</sub>O</p>
         <p>Just 10<sup>2</sup> times</p>
         <!-- Onthing to say now. it's just a comment -->
-        <img width="90%" src="../img/team-1.JPG" alt="Suman Da" />
+        <img width="50%" src="../img/team-1.JPG" alt="Suman Da" />
       </div>
       <div class="right-div">
         <h2 id="heading">Suman's Website</h2>
@@ -45,12 +37,16 @@
         <p>I have to drink H<sub>2</sub>O</p>
         <p>Just 10<sup>2</sup> times</p>
         <!-- Onthing to say now. it's just a comment -->
-        <img width="90%" src="../img/team-1.JPG" alt="Suman Da" />
+        <img width="50%" src="../img/team-1.JPG" alt="Suman Da" />
       </div>
     </div>
   </body>
 </html>
 <style>
+  .flex-container{
+    display: flex;
+    flex-direction: row;
+  }
   .common-text {
     color: blue;
     font-family: monospace;
@@ -66,15 +62,15 @@
   .left-div {
     width: 50%;
   }
-}
-@media screen and (max-width: 992px){
+  }
+  @media screen and (max-width: 992px){
   .right-div {
     width: 50%;
   }
-}
+  }
   .left-div,
   .right-div {
     display: inline-block;
-    vertical-align: top;
+     vertical-align: top; 
   }
 </style>
