@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="flex-container">
-      <div class="left-div">
+      <div class="row">
         <h2 id="heading">Sayantan's Website</h2>
         <hr />
         <p class="common-text">
@@ -23,7 +23,7 @@
         <!-- Onthing to say now. it's just a comment -->
         <img width="50%" src="../img/team-1.JPG" alt="Suman Da" />
       </div>
-      <div class="right-div">
+      <div class="row">
         <h2 id="heading">Suman's Website</h2>
         <hr />
         <p class="common-text">
@@ -45,7 +45,7 @@
 <style>
   .flex-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: fle.flex-container;
   }
   .common-text {
     color: blue;
@@ -58,16 +58,36 @@
   #heading {
     background-color: cyan;
   }
-  @media screen and (max-width: 992px){
   .left-div {
-    width: 50%;
+    flex: 50%;
+    padding: 20px;
+    width: 100%;
   }
-  }
-  @media screen and (max-width: 992px){
   .right-div {
-    width: 50%;
+    flex: 50%;
+    padding: 20px;
+    width: 100%;
   }
+  @media screen and (max-width: 992px) {
+  .left-div {
+    flex: 50%;
   }
+}
+@media screen and (max-width: 992px) {
+  .right-div {
+    flex: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .flex-container {
+    flex-direction:left-div;
+  }
+}
+@media screen and (max-width: 600px) {
+  .flex-container {
+    flex-direction:right-div;
+  }
+}
   .left-div,
   .right-div {
     display: inline-block;
