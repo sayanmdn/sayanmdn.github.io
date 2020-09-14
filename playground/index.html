@@ -18,26 +18,26 @@
           <big>Hello</big> all from me. I'm just brussing up my
           <b>html</b> skills.
         </p>
-        <pre>
+        <p>
           It's pre,
           Now I not need to write Br tag.
-        </pre>
+        </p>
         <p>I have to drink H<sub>2</sub>O</p>
         <p>Just 10<sup>2</sup> times</p>
         <!-- Onthing to say now. it's just a comment -->
         <img width="90%" src="../img/team-1.JPG" alt="Suman Da" />
       </div>
-      <div class="center-div">
+      <div class="right-div">
         <h2 id="heading">Suman's Website</h2>
         <hr />
         <p class="common-text">
           <big>Hello</big> all from me. I'm just brussing up my
           <b>html</b> skills.
         </p>
-        <pre>
+        <p>
           It's pre,
           Now I not need to write Br tag.
-        </pre>
+        </p>
         <p>I have to drink H<sub>2</sub>O</p>
         <p>Just 10<sup>2</sup> times</p>
         <!-- Onthing to say now. it's just a comment -->
@@ -58,14 +58,16 @@
   #heading {
     background-color: cyan;
   }
+  @media screen and (max-width: 992px){
   .left-div {
-    width: 30%;
+    width: 50%;
   }
-  .center-div {
-    width: 30%;
+}
+  .right-div {
+    width: 50%;
   }
   .left-div,
-  .center-div {
+  .right-div {
     display: inline-block;
     vertical-align: top;
   }
