@@ -10,6 +10,13 @@
     <title>Sayantan's Website</title>
   </head>
   <body>
+    <ul class="nav-bar">
+      <li class="nav-links"><a href="#home">Home</a></li>
+      <li class="nav-links"><a href="#news">News</a></li>
+      <li class="nav-links"><a href="#contact">Contact</a></li>
+      <li class="nav-links"><a href="#about">About</a></li>
+    </ul>
+
     <div class="holder-main">
       <div class="left-div">
         <h2 id="heading">Sayantan's Website</h2>
@@ -65,5 +72,20 @@
   .center-div {
     display: inline-block;
     vertical-align: top;
+  }
+  .nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  li.nav-links {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
   }
 </style>
