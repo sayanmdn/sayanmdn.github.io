@@ -10,6 +10,8 @@
     <title>Sayantan's Website</title>
   </head>
   <body>
+    <div class="flex-container">
+      <div class="row">
     <ul class="nav-bar">
       <li class="nav-links"><a href="#home">Home</a></li>
       <li class="nav-links"><a href="#news">News</a></li>
@@ -25,32 +27,35 @@
           <big>Hello</big> all from me. I'm just brussing up my
           <b>html</b> skills.
         </p>
-        <p>It's p, Now I need to write Br tag.</p>
         <p>I have to drink H<sub>2</sub>O</p>
         <p>Just 10<sup>2</sup> times</p>
         <!-- Onthing to say now. it's just a comment -->
-        <img width="90%" src="../img/team-1.JPG" alt="Suman Da" />
+        <img width="50%" src="../img/team-1.JPG" alt="Suman Da" />
       </div>
-      <div class="center-div">
+      <div class="row">
         <h2 id="heading">Suman's Website</h2>
         <hr />
         <p class="common-text">
           <big>Hello</big> all from me. I'm just brussing up my
           <b>html</b> skills.
         </p>
-        <pre>
+        <p>
           It's pre,
           Now I not need to write Br tag.
-        </pre>
+        </p>
         <p>I have to drink H<sub>2</sub>O</p>
         <p>Just 10<sup>2</sup> times</p>
         <!-- Onthing to say now. it's just a comment -->
-        <img width="90%" src="../img/team-1.JPG" alt="Suman Da" />
+        <img width="50%" src="../img/team-1.JPG" alt="Suman Da" />
       </div>
     </div>
   </body>
 </html>
 <style>
+  .flex-container{
+    display: flex;
+    flex-direction: fle.flex-container;
+  }
   .common-text {
     color: blue;
     font-family: monospace;
@@ -63,15 +68,39 @@
     background-color: cyan;
   }
   .left-div {
-    width: 30%;
+    flex: 50%;
+    padding: 20px;
+    width: 100%;
   }
-  .center-div {
-    width: 30%;
+  .right-div {
+    flex: 50%;
+    padding: 20px;
+    width: 100%;
   }
+  @media screen and (max-width: 992px) {
+  .left-div {
+    flex: 50%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .right-div {
+    flex: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .flex-container {
+    flex-direction:left-div;
+  }
+}
+@media screen and (max-width: 600px) {
+  .flex-container {
+    flex-direction:right-div;
+  }
+}
   .left-div,
-  .center-div {
+  .right-div {
     display: inline-block;
-    vertical-align: top;
+     vertical-align: top; 
   }
   .nav-bar {
     list-style-type: none;
