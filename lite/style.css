@@ -1,55 +1,60 @@
 .main {
-    background-image: linear-gradient(#112233, #002222);
-    /* height: 100%; */
+  background-image: linear-gradient(#112233, #002222);
+  /* height: 100%; */
 }
 .nav-sayantan {
-    padding-left: 10% !important;
+  padding-left: 10% !important;
 }
-.nav-menu-items{
-    float: right;
+.nav-menu-items {
+  float: right;
 }
 /* Animation */
 /* Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
 /* Global */
-html{
+html {
   min-height: 100%;
   overflow: hidden;
 }
-/* body{
-  height: calc(100vh - 8em);
-  padding: 4em;
-  color: rgba(255,255,255,.75);
-  font-family: 'Anonymous Pro', monospace;  
-  background-color: rgb(25,25,25);  
-} */
 body {
-  font-family: 'Anonymous Pro', monospace;  
+  font-family: "Anonymous Pro", monospace;
 }
-.line-1{
-    position: relative;
-    top: 50%;  
-    width: 100%;
-    margin: 0 auto;
-    border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 180%;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    transform: translateY(-50%);    
+.line-1 {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 180%;
+  /* text-align: left; */
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 /* Animation */
-.anim-typewriter{
+.anim-typewriter {
   animation: typewriter 4s steps(40) 1s 1 normal both,
-             blinkTextCursor 500ms steps(40) infinite normal;
+    blinkTextCursor 500ms steps(40) infinite normal;
 }
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 44%;}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 44%;
+  }
 }
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+.container {
+  margin-top: 18%;
+  text-align: center;
+  color: azure;
 }
