@@ -74,13 +74,19 @@ body {
   padding-top: 5%;
   margin: 5% 0% 0% 5%;
 }
-.skills{
+.skills {
   position: relative;
+  width: 45%;
   padding-top: 2%;
   margin-left: 5%;
   color: azure;
   margin-bottom: 5%;
 }
-.skill{
+.skill {
   padding-top: 2px;
+  width: 100%;
+}
+.progress {
+  height: 2px;
+  width: 100%;
 }
