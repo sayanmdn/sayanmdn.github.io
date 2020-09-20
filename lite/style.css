@@ -14,7 +14,7 @@
 
 /* Global */
 body {
-  color: #4e4e4e;
+  color: #fff6f2;
   background-color: #290101;
   font-family: "Anonymous Pro", monospace;
 }
@@ -68,6 +68,7 @@ body {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
   box-shadow: 2px 2px 2px 2px #031a4e;
+  height: 60vh;
 }
 .my-image {
   position: relative;
@@ -76,8 +77,9 @@ body {
 }
 .skills {
   position: relative;
-  width: 45%;
-  padding-top: 2%;
+  width: 100%;
+  /* padding-top: 2%; */
+  margin-top: 11%;
   margin-left: 5%;
   color: azure;
   margin-bottom: 5%;
@@ -85,8 +87,34 @@ body {
 .skill {
   padding-top: 2px;
   width: 100%;
+  margin-bottom: 3px;
 }
 .progress {
-  height: 2px;
+  height: 15px !important;
   width: 100%;
+}
+.progress-bar {
+  /* width: 80%; */
+  color: white;
+  text-align: left;
+  padding-left: 2%;
+}
+.left-about {
+  position: relative;
+  width: 40%;
+  padding-top: 2%;
+  margin-left: 5%;
+  color: azure;
+  margin-bottom: 5%;
+  float:left;
+}
+.right-about {
+  position: relative;
+  width: 40%;
+  padding-top: 5%;
+  margin-left: 55%;
+  color: azure;
+  margin-bottom: 5%;
+  overflow-x:hidden;
+  font-size: large;
 }
