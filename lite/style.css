@@ -68,7 +68,7 @@ body {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
   box-shadow: 2px 2px 2px 2px #031a4e;
-  height: 60vh;
+  padding-bottom: 1%;
 }
 .my-image {
   position: relative;
@@ -106,7 +106,7 @@ body {
   margin-left: 5%;
   color: azure;
   margin-bottom: 5%;
-  float:left;
+  float: left;
 }
 .right-about {
   position: relative;
@@ -115,6 +115,11 @@ body {
   margin-left: 55%;
   color: azure;
   margin-bottom: 5%;
-  overflow-x:hidden;
+  overflow-x: hidden;
   font-size: large;
+}
+.contact-inputs {
+  position: relative;
+  width: 100%;
+  color: blue;
 }
