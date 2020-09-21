@@ -89,13 +89,13 @@
     <div class="left-about" style="padding-top: 5%;">
       <form name="myForm" action="http://localhost:5500/lite/" onsubmit="return validateForm()" method="GET">
         <p>Name: </p> 
-        <input type="text" name="fname" class="contact-inputs">
+        <input type="text" name="name" class="contact-inputs" placeholder="Your Name">
         <p>Email: </p> 
-        <input type="email" name="email" class="contact-inputs">
+        <input type="email" name="email" class="contact-inputs" placeholder="Your Email" required>
         <p>Number: </p> 
-        <input type="tel" name="number" class="contact-inputs">
+        <input type="tel" name="number" class="contact-inputs" placeholder="Your Mobile Number" required minlength="10" maxlength="10">
         <p>Message: </p> 
-        <textarea type="text" name="message" class="contact-inputs" rows="3" cols="3">Write here</textarea><br />   
+        <textarea type="text" name="message" class="contact-inputs" rows="3" placeholder="Write your message here" maxlength="300"></textarea><br />   
         <input type="submit" value="Submit" style="color: blue; margin-top: 2%;">
       </form>
     </div>
