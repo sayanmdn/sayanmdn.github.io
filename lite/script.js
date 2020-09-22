@@ -5,6 +5,7 @@ validateForm = () => {
         return false;
     }
     var y = document.forms["myForm"]["number"].value;
+    // var z = document.forms["myForms"]["message"].value;
     // alert(typeof(y))
 
     var phoneno = /^\d{10}$/;
@@ -15,4 +16,15 @@ validateForm = () => {
         alert("Phone number not valid. 10 digits must be there in a number");
         return false;
     }
+
+
+
+    // var letters = /^[A-Za-z]+$/;
+    // if (z.match(letters)) {
+    //     return true;
+    // }
+    // else {
+    //     alert("message");
+    //     return false;
+    // }
 }

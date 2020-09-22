@@ -117,9 +117,31 @@ body {
   margin-bottom: 5%;
   overflow-x: hidden;
   font-size: large;
+  animation-name: leftToRight;
+  animation-duration: 3s;
 }
 .contact-inputs {
   position: relative;
   width: 100%;
   color: blue;
+}
+@keyframes leftToRight {
+  from {
+    margin-left: 50%;
+  }
+  top {
+    margin-left: 55%;
+  }
+}
+#get-in-touch{
+  animation-name: rightToLeft;
+  animation-duration: 3s;
+}
+@keyframes rightToLeft {
+  from {
+    margin-left: 60%;
+  }
+  top {
+    margin-left: 55%;
+  }
 }
