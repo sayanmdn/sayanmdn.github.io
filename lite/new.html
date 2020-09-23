@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-
 <html>
-    <body>
-        <form>
-         <p>Name:</p>
-         <input type="email" placeholder="Your name">
-        </form>
-    </body>
-</html>
+<head>
+<title>jQuery Demo example</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js">
+ </script>
+<script type="text/javascript">
+function isIntoView(elem)
+{
+    var documentViewTop = $(window).scrollTop();
+    var documentViewBottom = documentViewTop + $(window).height();
+
+    var elementTop = $(elem).offset().top;
+    var elementBottom = elementTop + $(elem).height();
+
+    return ((elementBottom <= documentViewBottom) && (elementTop >= documentViewTop));
+}
+  $(window).scroll(function(){
+   if (isIntoView($('#myDiv'))){
+       alert("Div in view port");
+    }
+})
+</script>
+ </head>	
+<body>
+<div id="myDiv" style="margin-top:1300px;width:200px;height:200px;background:yellow;">
+<h2>Demo Div</h2>
+</div> 
+</body>
+</html>    
