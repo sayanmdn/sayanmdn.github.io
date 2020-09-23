@@ -149,3 +149,15 @@ body {
     margin-left: 55%;
   }
 } */
+#progress80 {
+  animation-name: progress80Anim;
+  animation-duration: 1s;
+}
+@keyframes progress80Anim {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
