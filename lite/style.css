@@ -161,3 +161,8 @@ body {
     width: 80%;
   }
 }
+
+.z-text {
+	transform: rotateY(-15deg);
+	transition: transform 1s;
+}

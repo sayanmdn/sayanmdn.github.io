@@ -16,6 +16,18 @@ validateForm = () => {
     }
 
 }
+
+// Ztext 
+
+var ztxt = new Ztextify(".hero-text", {
+	depth: "30px",
+	layers: 8,
+	fade: true,
+	direction: "both",
+	event: "pointer",
+	eventRotation: "35deg"
+});
+
 // get the element to animate
 // var element = document.getElementById('get-in-touch');
 // var elemetTop = document.getElementsByClassName('right-about')
