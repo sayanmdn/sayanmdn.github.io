@@ -21,7 +21,13 @@
       <!-- AOS Add ( https://michalsnik.github.io/aos/ ) -->
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script src="/path/to/ztext.min.js"></script>
+    <!-- High CHarts Libraries -->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/series-label.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    
 
   </head>
   <body style="background-color: blue;">
@@ -135,6 +141,25 @@
           </li>
         </ul>
       </div>
+    </div>
+  </div>
+  <div class="about" style="font-family: 'Anonymous Pro', monospace;" data-aos="fade-up"
+  data-aos-duration="500">
+    <div class="left-about" style="padding-top: 5%;" data-aos="fade-up" data-aos-duration="2000" data-aos-anchor-placement="center-bottom">
+      <p>Hii left</p>
+      
+      <p>Bye left</p>
+    </div>
+    <div class="right-about" id="get-in-touch" data-aos="fade-left" data-aos-duration="2000" data-aos-anchor-placement="center-bottom">
+      <p>Hii right</p>
+      <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+          Basic line chart showing trends in a dataset. This chart includes the
+          <code>series-label</code> module, which adds a label to each line for
+          enhanced readability.
+        </p>
+      </figure>
     </div>
   </div>
   </body>

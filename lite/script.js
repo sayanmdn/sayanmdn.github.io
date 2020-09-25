@@ -17,69 +17,74 @@ validateForm = () => {
 
 }
 
-// Ztext 
+//High chart 
+Highcharts.chart('container', {
 
-var ztxt = new Ztextify(".hero-text", {
-	depth: "30px",
-	layers: 8,
-	fade: true,
-	direction: "both",
-	event: "pointer",
-	eventRotation: "35deg"
-});
-
-// get the element to animate
-// var element = document.getElementById('get-in-touch');
-// var elemetTop = document.getElementsByClassName('right-about')
-// var elementHeight = element.clientHeight;
-// var elementTopHeight = elemetTop.clientHeight;
-
-// // listen for scroll event and call animate function
-// document.addEventListener('scroll', animate);
-// document.addEventListener('scroll', animateTop);
-// // check if element is in view
-// function inView() {
-//     // get window height
-//     var windowHeight = window.innerHeight;
-//     // get number of pixels that the document is scrolled
-//     var scrollY = window.scrollY || window.pageYOffset;
-
-//     // get current scroll position (distance from the top of the page to the bottom of the current viewport)
-//     var scrollPosition = scrollY + windowHeight;
-//     // get element position (distance from the top of the page to the bottom of the element)
-//     var elementPosition = element.getBoundingClientRect().top + scrollY + elementHeight;
-
-//     // is scroll position greater than element position? (is element in view?)
-//     if (scrollPosition > elementPosition) {
-//         return true;
-//     }
-
-//     return false;
-// }
-
-// // animate element when it is in view
-// function animate() {
-//     // is element in view?
-//     if (inView()) {
-//         // element is in view, add class to element
-//         element.classList.add('animate');
-//         // elemetTop.classList.add('animateTop');
-//     }
-// }
-// // var count =1;
-// function isIntoView(elem)
-// {
-//     var documentViewTop = $(window).scrollTop();
-//     // var documentViewBottom = documentViewTop + $(window).height();
-
-//     var elementTop = $(elem).offset().top;
-//     // var elementBottom = elementTop + $(elem).height();
-
-//     return ((elementTop >= documentViewTop));
-// }
-//   $(window).scroll(function(){
-//    if (isIntoView($('#get-in-touch'))){
-//        alert("Div in view port");
-//     //    count = 0;
-//     }
-// })
+    title: {
+      text: 'Solar Employment Growth by Sector, 2010-2016'
+    },
+  
+    subtitle: {
+      text: 'Source: thesolarfoundation.com'
+    },
+  
+    yAxis: {
+      title: {
+        text: 'Number of Employees'
+      }
+    },
+  
+    xAxis: {
+      accessibility: {
+        rangeDescription: 'Range: 2010 to 2017'
+      }
+    },
+  
+    legend: {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'middle'
+    },
+  
+    plotOptions: {
+      series: {
+        label: {
+          connectorAllowed: false
+        },
+        pointStart: 2010
+      }
+    },
+  
+    series: [{
+      name: 'Installation',
+      data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+    }, {
+      name: 'Manufacturing',
+      data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+    }, {
+      name: 'Sales & Distribution',
+      data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
+    }, {
+      name: 'Project Development',
+      data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
+    }, {
+      name: 'Other',
+      data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
+    }],
+  
+    responsive: {
+      rules: [{
+        condition: {
+          maxWidth: 500
+        },
+        chartOptions: {
+          legend: {
+            layout: 'horizontal',
+            align: 'center',
+            verticalAlign: 'bottom'
+          }
+        }
+      }]
+    }
+  
+  });
