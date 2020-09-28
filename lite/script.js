@@ -18,6 +18,7 @@ validateForm = () => {
 }
 
 //High chart 
+
 Highcharts.chart('container', {
 
     title: {
