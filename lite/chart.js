@@ -1,7 +1,7 @@
-// import mydata from "./test.json";
+// import * as mydata from "./test.json";
   // const mydata = import("http://127.0.0.1:5500/test.json")
 //   import mydata from "http://127.0.0.1:5500/test.json"
-// console.log(mydata)
+// console.log(JSON.stringify(mydata))
 
   Highcharts.chart("container", {
     chart: {
@@ -93,11 +93,15 @@
       ],
     },
   });
+
+//   Container 3 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
   Highcharts.chart("container3", {
     chart: {
       plotBackgroundColor: "white",
       plotBorderWidth: 0,
-      plotShadow: false,
+      plotShadow: true,
       // height: 200,
     },
     exporting: {
@@ -107,7 +111,8 @@
       enabled: false,
     },
     title: {
-      text: "Browser<br>shares<br>2017",
+      text: "88.6%<br>2019",
+    //   <br>shares<br>2017",
       align: "center",
       verticalAlign: "middle",
       y: 60,
@@ -133,23 +138,35 @@
         startAngle: -90,
         endAngle: 90,
         center: ["50%", "75%"],
-        size: "110%",
+        size: "100%",
       },
     },
     series: [
-      {
-        type: "pie",
-        name: "Browser share",
-        innerSize: "50%",
-        // data: mydata
-      },
-    ],
+        {
+          type: "pie",
+          name: "Browser share",
+          innerSize: "50%",
+          data: [
+            ["", 58.9],
+            {
+              name: "Other",
+              y: 7.61,
+              dataLabels: {
+                enabled: false,
+              },
+            },
+          ],
+        },
+      ],
   });
+
+//   Container 1 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
   Highcharts.chart("container1", {
     chart: {
       plotBackgroundColor: "white",
       plotBorderWidth: 0,
-      plotShadow: false,
+      plotShadow: true,
       // height: 200,
     },
     exporting: {
@@ -159,7 +176,8 @@
       enabled: false,
     },
     title: {
-      text: "Browser<br>shares<br>2017",
+      text: "75.40%<br>2017",
+    //   <br>shares<br>2017",
       align: "center",
       verticalAlign: "middle",
       y: 60,
@@ -185,7 +203,7 @@
         startAngle: -90,
         endAngle: 90,
         center: ["50%", "75%"],
-        size: "110%",
+        size: "100%",
       },
     },
     series: [
@@ -194,11 +212,10 @@
         name: "Browser share",
         innerSize: "50%",
         data: [
-          ["Chrome", 58.9],
-          ["Firefox", 13.29],
-          ["Internet Explorer", 13],
-          ["Edge", 3.78],
-          ["Safari", 3.42],
+          ["", 23.29],
+        //   ["Internet Explorer", 13],
+        //   ["Edge", 3.78],
+        //   ["Safari", 3.42],
           {
             name: "Other",
             y: 7.61,
@@ -210,11 +227,15 @@
       },
     ],
   });
+
+//   Container 2 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
   Highcharts.chart("container2", {
     chart: {
       plotBackgroundColor: "white",
       plotBorderWidth: 0,
-      plotShadow: false,
+      plotShadow: true,
       // height: 200,
     },
     exporting: {
@@ -224,7 +245,8 @@
       enabled: false,
     },
     title: {
-      text: "Browser<br>shares<br>2017",
+      text: "71.4%<br>2018",
+    //   <br>shares<br>2017",
       align: "center",
       verticalAlign: "middle",
       y: 60,
@@ -250,7 +272,7 @@
         startAngle: -90,
         endAngle: 90,
         center: ["50%", "75%"],
-        size: "110%",
+        size: "100%",
       },
     },
     series: [
@@ -259,11 +281,11 @@
         name: "Browser share",
         innerSize: "50%",
         data: [
-          ["Chrome", 58.9],
-          ["Firefox", 13.29],
-          ["Internet Explorer", 13],
-          ["Edge", 3.78],
-          ["Safari", 3.42],
+        //   ["Chrome", 58.9],
+        //   ["Firefox", 13.29],
+          ["", 19],
+        //   ["Edge", 3.78],
+        //   ["Safari", 3.42],
           {
             name: "Other",
             y: 7.61,
