@@ -28,19 +28,27 @@
               class="form-control"
               style="margin-top: 5%"
               placeholder="YourName"
+              id="nameField"
             />
             <input
               type="email"
               class="form-control"
               style="margin-top: 5%"
               placeholder="Your Email"
+              oncopy="return false"
+              oncut="return false"
+              onpaste="return false"
             />
-            <input 
-            class="form-control"
-            style="margin-top: 5%" 
-            placeholder="Your Mobile Number" 
-            type="text" 
-            onkeypress="return isNumberKey(event)"
+            <input
+              class="form-control"
+              style="margin-top: 5%"
+              placeholder="Your Mobile Number"
+              type="text"
+              id="txt_number"
+              onkeypress="return isNumberKey(event)"
+              oncopy="return false"
+              oncut="return false"
+              onpaste="return false"
             />
             <textarea
               class="form-control"
@@ -71,10 +79,19 @@
     ></script>
     <script>
       isNumberKey = (evt) => {
-        console.log(evt.keyCode);
+        let countN = 0;
+        // console.log(evt.keyCode);
+        var num_element = document.getElementById("txt_number");
+        // console.log(num_element.value.length)
+        if (num_element.value.length == 10) return false;
         var charCode = evt.which ? evt.which : event.keyCode;
         if (charCode > 31 && (charCode < 48 || charCode > 57)) return false;
+        countN = countN + 1;
+        console.log(countN);
         return true;
+      };
+      window.onload = function () {
+        document.getElementById("nameField").focus();
       };
     </script>
   </body>
