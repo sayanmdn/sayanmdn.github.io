@@ -82,8 +82,7 @@
     ></script>
     <script>
       isNumberKey = (evt) => {
-        let countN = 0;
-        console.log(evt.keyCode);
+        // console.log(evt.keyCode);
         var num_element = document.getElementById("txt_number");
         // console.log(num_element.value.length)
         if (num_element.value.length == 10) return false;
@@ -93,7 +92,7 @@
           return false;
         }
         countN = countN + 1;
-        console.log(countN);
+        // console.log(countN);
         num_element.style.borderColor = "rgb(206, 212, 218)";
         return true;
       };
