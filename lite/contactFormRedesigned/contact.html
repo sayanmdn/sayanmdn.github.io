@@ -23,29 +23,38 @@
       <div class="row justify-content-sm-center">
         <div class="col-md-4" style="margin-top: 10%; text-align: center">
           <h3>Contact Form</h3>
-          <input
+          <form name="myForm">
+            <input
+              class="form-control"
+              style="margin-top: 5%"
+              placeholder="YourName"
+            />
+            <input
+              type="email"
+              class="form-control"
+              style="margin-top: 5%"
+              placeholder="Your Email"
+            />
+            <input 
             class="form-control"
-            style="margin-top: 5%"
-            placeholder="YourName"
-          />
-          <input
-            class="form-control"
-            style="margin-top: 5%"
-            placeholder="Your Email"
-          />
-          <input
-            class="form-control"
-            style="margin-top: 5%"
-            placeholder="Your Mobile Number"
-          />
-          <textarea
-            class="form-control"
-            style="margin-top: 5%;"
-            placeholder="Write your message here"
-          ></textarea>
-          <button type="button" class="btn btn-primary" style="margin-top: 5%">
-            Primary
-          </button>
+            style="margin-top: 5%" 
+            placeholder="Your Mobile Number" 
+            type="text" 
+            onkeypress="return isNumberKey(event)"
+            />
+            <textarea
+              class="form-control"
+              style="margin-top: 5%"
+              placeholder="Write your message here"
+            ></textarea>
+            <button
+              type="button"
+              class="btn btn-primary"
+              style="margin-top: 5%"
+            >
+              Primary
+            </button>
+          </form>
         </div>
       </div>
     </div>
@@ -60,5 +69,13 @@
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
+    <script>
+      isNumberKey = (evt) => {
+        console.log(evt.keyCode);
+        var charCode = evt.which ? evt.which : event.keyCode;
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) return false;
+        return true;
+      };
+    </script>
   </body>
 </html>
