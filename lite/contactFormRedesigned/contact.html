@@ -16,13 +16,13 @@
       crossorigin="anonymous"
     />
 
-    <title>Hello, world!</title>
+    <title>Contact Form</title>
   </head>
   <body>
     <div class="container-md">
       <div class="row justify-content-sm-center">
         <div class="col-md-4" style="margin-top: 10%; text-align: center">
-          <h3>Contact Form</h3>
+          <h3 style="color: #0062cc">Contact Form</h3>
           <form name="myForm">
             <input
               class="form-control"
@@ -63,7 +63,7 @@
               class="btn btn-primary"
               style="margin-top: 5%"
             >
-              Primary
+              Submit
             </button>
           </form>
         </div>
@@ -118,9 +118,9 @@
         var num_element = document.getElementById("emailField");
         var re = /([A-Z0-9a-z_-][^@])+?@[^$#<>?]+?\.[\w]{2,4}/.test(evt.value);
         if (!re) {
-          num_element.style.borderColor = "red"
+          num_element.style.borderColor = "red";
         } else {
-            num_element.style.borderColor = "rgb(206, 212, 218)";
+          num_element.style.borderColor = "rgb(206, 212, 218)";
         }
       };
       window.onload = function () {
