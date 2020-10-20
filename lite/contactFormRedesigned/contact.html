@@ -29,15 +29,18 @@
               style="margin-top: 5%"
               placeholder="YourName"
               id="nameField"
+              onkeypress="return isCharKey(event)"
             />
             <input
               type="email"
               class="form-control"
+              id="emailField"
               style="margin-top: 5%"
               placeholder="Your Email"
               oncopy="return false"
               oncut="return false"
               onpaste="return false"
+              onchange="return isEmailValid(this)"
             />
             <input
               class="form-control"
@@ -80,19 +83,50 @@
     <script>
       isNumberKey = (evt) => {
         let countN = 0;
-        // console.log(evt.keyCode);
+        console.log(evt.keyCode);
         var num_element = document.getElementById("txt_number");
         // console.log(num_element.value.length)
         if (num_element.value.length == 10) return false;
         var charCode = evt.which ? evt.which : event.keyCode;
-        if (charCode > 31 && (charCode < 48 || charCode > 57)) return false;
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+          num_element.style.borderColor = "red";
+          return false;
+        }
         countN = countN + 1;
         console.log(countN);
+        num_element.style.borderColor = "rgb(206, 212, 218)";
         return true;
+      };
+      isCharKey = (evt) => {
+        var charCode = evt.which ? evt.which : event.keyCode;
+        var num_element = document.getElementById("nameField");
+        if (
+          (charCode >= 97 && charCode <= 122) ||
+          (charCode >= 65 && charCode <= 90) ||
+          charCode == 32 ||
+          charCode == 46
+        ) {
+          num_element.style.borderColor = "rgb(206, 212, 218)";
+          return true;
+        } else {
+          num_element.style.borderColor = "red";
+          return false;
+        }
+      };
+      isEmailValid = (evt) => {
+        //   console.log(evt.value)
+        var num_element = document.getElementById("emailField");
+        var re = /([A-Z0-9a-z_-][^@])+?@[^$#<>?]+?\.[\w]{2,4}/.test(evt.value);
+        if (!re) {
+          num_element.style.borderColor = "red"
+        } else {
+            num_element.style.borderColor = "rgb(206, 212, 218)";
+        }
       };
       window.onload = function () {
         document.getElementById("nameField").focus();
       };
     </script>
+    <script></script>
   </body>
 </html>
