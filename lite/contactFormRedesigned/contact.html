@@ -150,7 +150,7 @@
       $("#nameField").on("input", function (e) {
         $(this).val(function (i, v) {
           // let getStr = v.replace(/[^\w\s]/gi, "");
-          return v.replace(/[^\w\s]/gi, "");
+          return v.replace(/[^\w\s]/gi, "").replace(/[0-9]/g, '');;
         });
       });
     </script>
