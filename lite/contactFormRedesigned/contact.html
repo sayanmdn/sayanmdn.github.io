@@ -15,7 +15,7 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Contact Form</title>
   </head>
   <body>
@@ -29,6 +29,7 @@
               style="margin-top: 5%"
               placeholder="YourName"
               id="nameField"
+              onpaste="return nameInputStringCheck(event)"
               onkeypress="return isCharKey(event)"
               onchange="isNameValid(this)"
             />
@@ -142,9 +143,16 @@
           value.style.borderColor = "red";
         }
       };
+      nameInputStringCheck = (evt) => {};
       window.onload = function () {
         document.getElementById("nameField").focus();
       };
+      $("#nameField").on("input", function (e) {
+        $(this).val(function (i, v) {
+          // let getStr = v.replace(/[^\w\s]/gi, "");
+          return v.replace(/[^\w\s]/gi, "");
+        });
+      });
     </script>
     <script></script>
   </body>
