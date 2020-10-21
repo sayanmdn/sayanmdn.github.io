@@ -30,6 +30,7 @@
               placeholder="YourName"
               id="nameField"
               onkeypress="return isCharKey(event)"
+              onchange="isNameValid(this)"
             />
             <input
               type="email"
@@ -52,6 +53,7 @@
               oncopy="return false"
               oncut="return false"
               onpaste="return false"
+              onchange="isTenNumers(this)"
             />
             <textarea
               class="form-control"
@@ -89,9 +91,12 @@
         var charCode = evt.which ? evt.which : event.keyCode;
         if (charCode > 31 && (charCode < 48 || charCode > 57)) {
           num_element.style.borderColor = "red";
+          setTimeout(function () {
+            num_element.style.borderColor = "rgb(206, 212, 218)";
+          }, 300);
           return false;
         }
-        countN = countN + 1;
+        // countN = countN + 1;
         // console.log(countN);
         num_element.style.borderColor = "rgb(206, 212, 218)";
         return true;
@@ -109,6 +114,9 @@
           return true;
         } else {
           num_element.style.borderColor = "red";
+          setTimeout(function () {
+            num_element.style.borderColor = "rgb(206, 212, 218)";
+          }, 300);
           return false;
         }
       };
@@ -116,10 +124,22 @@
         //   console.log(evt.value)
         var num_element = document.getElementById("emailField");
         var re = /([A-Z0-9a-z_-][^@])+?@[^$#<>?]+?\.[\w]{2,4}/.test(evt.value);
-        if (!re) {
-          num_element.style.borderColor = "red";
-        } else {
+        if (re) {
           num_element.style.borderColor = "rgb(206, 212, 218)";
+        } else if (evt.value.length == 0) {
+          num_element.style.borderColor = "rgb(206, 212, 218)";
+        } else {
+          num_element.style.borderColor = "red";
+        }
+      };
+      isNameValid = (value) => {
+        var name_element = document.getElementById("nameField");
+        name_element.style.borderColor = "rgb(206, 212, 218)";
+      };
+      isTenNumers = (value) => {
+        if (value.value.length != 10 && value.value.length != 0) {
+          console.log("flag");
+          value.style.borderColor = "red";
         }
       };
       window.onload = function () {
