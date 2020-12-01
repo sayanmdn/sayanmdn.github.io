@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:aqua">
+
+<h1>Child website</h1>
+<div id="display"></div>
+<button onclick="sendToParent()">Click to send to parent</button>
+
+</body>
+</html>
+<script>
+    results = document.getElementById("display")
+    results.innerHTML = "hii"
+
+    window.addEventListener('message', handleMessage = e =>{
+        results.innerHTML = e.data;
+        console.log("Object from Iframe")
+        console.log(e)
+    }, false);
+    sendToParent = () =>{
+    var parentWindow = window.parent; 
+    parentWindow.postMessage("131Loaded", '*');
+    }
+
+</script>
